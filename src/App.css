@@ -1,38 +1,213 @@
 .App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.panels {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  z-index: 1000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.landing-text-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #121212;
+
+}
+
+.fold {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 0 0 10rem 7.5rem;
+  border-style: solid;
+  border-color: #8A00FF #2a2a2a;
+}
+
+.landing-text {
+  display: inline;
+  width: 70%;
+}
+
+.landing-img {
+  position: absolute;
+  bottom: 10px;
+  right: -250px;
+  transform: rotate(-20deg);
+}
+
+.feature-text-box {
+  background-color: #8A00FF;
+  height: 75%;
+  width: 100%;
+}
+
+#first {
+  position: fixed;
+  padding-top: 7.5rem;
+  top: 0;
+  left: 0;
+  /* prevents your fixed panel from being on top of your subsequent panels */
+}
+
+
+#second {
+  margin-top: 120%;
+
+}
+
+.sentence {
+  display: inline;
+  align-items: center;
+  color: inherit;
+}
+
+.slidingVertical {
+  color: inherit;
+
+  display: inline;
+  text-indent: 16px;
+}
+
+.slidingVertical span {
+  animation: topToBottom 10s linear infinite 0s;
+  -ms-animation: topToBottom 10s linear infinite 0s;
+  /* -webkit-animation: topToBottom 12.5s linear infinite 0s; */
+  color: #8A00FF;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.slidingVertical span:nth-child(2) {
+  animation-delay: 2.5s;
+  -ms-animation-delay: 2.5s;
+  -webkit-animation-delay: 2.5s;
+}
+
+.slidingVertical span:nth-child(3) {
+  animation-delay: 5s;
+  -ms-animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+}
+
+.slidingVertical span:nth-child(4) {
+  animation-delay: 7.5s;
+  -ms-animation-delay: 7.5s;
+  -webkit-animation-delay: 7.5s;
+}
+
+
+/*topToBottom Animation*/
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  5% {
+    opacity: 0;
+    -moz-transform: translateY(-50px);
+  }
+
+  10% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+
+  25% {
+    opacity: 1;
+    -moz-transform: translateY(0px);
+  }
+
+  30% {
+    opacity: 0;
+    -moz-transform: translateY(50px);
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+  }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+
+  25% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+
+  30% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* @keyframes topToBottom {
+  0% {
+      opacity: 0;
+  }
+
+  5% {
+      opacity: 0;
+      -ms-transform: translateY(-50px);
+  }
+
+  10% {
+      opacity: 1;
+      -ms-transform: translateY(0px);
+  }
+
+  25% {
+      opacity: 1;
+      -ms-transform: translateY(0px);
+  }
+
+  30% {
+      opacity: 0;
+      -ms-transform: translateY(50px);
+  }
+
+  80% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 0;
+  }
+} */

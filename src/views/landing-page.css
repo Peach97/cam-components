@@ -1,0 +1,24 @@
+.landing-btn {
+    margin: 0;
+    display: inline-block
+}
+
+.landing-btn:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #121212;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.landing-btn:hover:after {
+    transform: scaleX(1);
+
+
+}
+
+.landing-btn:after {
+    transform-origin: 0% 50%;
+
+
+}
