@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
   height: 100%;
   width: 100%;
 }
@@ -40,6 +39,22 @@
   width: 70%;
 }
 
+.landing-page-img {
+  min-height: 100%;
+  min-width: 1024px;
+  bottom: 125px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: absolute;
+
+  left: 0;
+  z-index: -1;
+}
+
 .landing-img {
   position: absolute;
   bottom: 10px;
@@ -54,16 +69,20 @@
 }
 
 #first {
-  position: fixed;
+  position: relative;
   padding-top: 7.5rem;
   top: 0;
   left: 0;
+  height: 100vh;
+  width: 100%;
   /* prevents your fixed panel from being on top of your subsequent panels */
 }
 
 
 #second {
-  margin-top: 120%;
+  position: relative;
+  height: 100vh;
+  width: 100%;
 
 }
 

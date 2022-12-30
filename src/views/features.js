@@ -11,7 +11,7 @@ export default function FeaturePage() {
       className="panels"
       component="section"
     >
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           color: "primary.text.primary",
@@ -40,7 +40,7 @@ export default function FeaturePage() {
             into my projects in order to surpass the status quo.
           </Typography>
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

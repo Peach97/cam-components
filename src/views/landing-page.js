@@ -3,12 +3,13 @@ import "../App.css";
 import { Typography, Box } from "@mui/material";
 import MyButton from "../components/btn";
 import Scene from "../components/Three/Scene";
-import me from "../images/My project.png";
+import background from "../images/Background5.png";
 
 export default function LandingPage() {
   return (
     <Box id="first" bgcolor="primary.main" className="panels">
-      <div className="fold" />
+      {/* <div className="fold" /> */}
+      <img src={background} alt="/" className="landing-page-img" />
       <Box
         sx={{ mt: "2.5rem", color: "text.primary" }}
         component="div"
@@ -32,7 +33,7 @@ export default function LandingPage() {
           </div>
           Lets get to it.
           <Box sx={{ mt: "2.5rem" }}>
-            <MyButton fontSize="1.75rem" padding="0.25rem 2rem 0.25rem 0">
+            <MyButton fontSize="1.5rem" padding="0.25rem 2rem 0.25rem 0">
               See Pricing
             </MyButton>
           </Box>

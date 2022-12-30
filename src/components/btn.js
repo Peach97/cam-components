@@ -4,13 +4,13 @@ import styled from "@emotion/styled";
 
 const CustomButton = styled("button")`
   background: none;
+  text-transform: uppercase;
   color: inherit;
   border: none;
   font: inherit;
   cursor: pointer;
   outline: inherit;
   display: block;
-  text-transform: none;
   font-weight: 400;
   background: none;
   color: #ffffff;

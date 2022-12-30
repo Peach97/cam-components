@@ -18,10 +18,10 @@ export default function OrbitController() {
     <OrbitControls
       enableZoom={false}
       enableDamping={true}
-      dampingFactor={0.003}
+      dampingFactor={0.0009}
       ref={orbitControlsRef}
       minPolarAngle={angleToRadians(60)}
-      maxPolarAngle={angleToRadians(100)}
+      maxPolarAngle={angleToRadians(65)}
     />
   );
 }

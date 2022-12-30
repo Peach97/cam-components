@@ -9,7 +9,7 @@ export default function Scene() {
     background: "transparent",
     height: "100vh",
     width: "60%",
-    position: "fixed",
+    position: "absolute",
     top: 0,
     right: 0,
     zIndex: 99,
