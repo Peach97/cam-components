@@ -1,8 +1,0 @@
-{
-    "extends": ["plugin:react/recommended"],
-     "rules": {
-      "react/no-unknown-property": "warn",
-      "strict": "off",
-      "no-unused-vars": "off"
-    }
-  }
