@@ -1,5 +1,5 @@
 {
-    "extends": "next/core-web-vitals",
+    "extends": ["plugin:react/recommended"],
      "rules": {
       "react/no-unknown-property": "warn",
       "strict": "off",
