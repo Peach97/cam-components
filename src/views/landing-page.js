@@ -3,13 +3,13 @@ import "../App.css";
 import { Typography, Box } from "@mui/material";
 import MyButton from "../components/btn";
 import Scene from "../components/Three/Scene";
-import background from "../images/Background5.png";
+import background from "../images/Background6.png";
 
 export default function LandingPage() {
   return (
-    <Box id="first" bgcolor="primary.main" className="panels">
+    <Box id="first" bgcolor="background.default" className="panels">
       {/* <div className="fold" /> */}
-      <img src={background} alt="/" className="landing-page-img" />
+      {/* <img src={background} alt="/" className="landing-page-img" /> */}
       <Box
         sx={{ mt: "2.5rem", color: "text.primary" }}
         component="div"

@@ -2,7 +2,7 @@ import * as React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/navbar";
 import LandingPage from "./views/landing-page";
-import FeaturePage from "./views/features";
+import FeaturePage from "./views/Features/features";
 import Toggler from "./lib/theme";
 import { Box } from "@mui/material";
 

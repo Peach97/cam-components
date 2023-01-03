@@ -8,7 +8,7 @@ const customLight = (mode) => ({
       ...(mode === "light" && {
         main: "#121212",
         secondary: "#8A00FF",
-        tertiary: "#FADF63",
+        tertiary: "#088F8F",
         transparent: "#f4faff80",
         divider: "#FFFFFF",
         text: {
@@ -19,7 +19,7 @@ const customLight = (mode) => ({
       }),
     },
     background: {
-      default: "#121212",
+      default: "#16161d",
     },
   },
 });
