@@ -29,6 +29,7 @@ const CustomButton = styled("button")`
     transform-origin: 0% 50%;
   }
 `;
+
 export default function MyButton({ children, fontSize, padding, margin }) {
   return (
     <CustomButton

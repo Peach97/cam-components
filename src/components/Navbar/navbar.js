@@ -133,7 +133,7 @@ function Navbar() {
               />
             </IconButton>
             <MyButton
-              fontSize="1.5rem"
+              fontSize="1.25rem"
               padding="0 1rem 0 1rem"
               margin="0 0 0 0"
             >
