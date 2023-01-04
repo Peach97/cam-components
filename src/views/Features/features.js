@@ -31,13 +31,20 @@ const icons = [
 ];
 
 export default function FeaturePage() {
+  React.useEffect(() => {
+    var panel = document.querySelector("#second");
+    if (panel) {
+      window.addEventListener("scroll", () => {
+        const offsetTop = panel.getBoundingClientRect().top;
+        if (offsetTop <= 0) {
+          panel.classList.add(".sticky");
+        }
+      });
+    }
+  });
+
   return (
-    <Box
-      id="second"
-      bgcolor="background.default"
-      className="panels"
-      component="section"
-    >
+    <div id="second" className="panels">
       <Box
         className="icon-btn-box"
         color={"primary.text.primary"}
@@ -46,22 +53,47 @@ export default function FeaturePage() {
         }}
       >
         <Grid justifyContent="center" bgcolor="transparent" container>
+          <Typography
+            component="div"
+            fontWeight={800}
+            fontSize="2rem"
+            textAlign="center"
+            width="100%"
+            sx={{ margin: "10rem 10rem 0 10rem" }}
+          >
+            What I can do for you.
+          </Typography>
+          <Typography
+            component="div"
+            fontWeight={600}
+            fontSize="1.15rem"
+            textAlign="center"
+            variant="subtitle"
+            width="100%"
+            sx={{ margin: "2.5rem 10rem 0 10rem" }}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+            consectetur fermentum risus id blandit. Donec imperdiet nisi non
+            tortor eleifend vehicula. Vestibulum id risus nec est faucibus
+            aliquet. Ut vulputate arcu eget felis pellentesque, eu dictum orci
+            consequat.
+          </Typography>
           {icons.map((icon, index) => (
             <Grid
               color={"primary.text.primary"}
-              bgcolor="transparent"
+              bgcolor="primary.secondary"
               md={2.5}
               sm={1}
               item
               key={index}
               sx={{
-                display: "flex",
                 flexDirection: "column",
-                // justifyContent: "center",
+                width: "100%",
+                justifyContent: "center",
               }}
-              // className="icon-btns"
+              className="icon-btns"
             >
-              <IconButton
+              {/* <IconButton
                 sx={{
                   m: "0 auto 0 auto",
                   color: "primary.text.primary",
@@ -75,8 +107,8 @@ export default function FeaturePage() {
                   src={require("../../images/" + icon.link + ".png")}
                   alt={`Unable to find ${icons.title}`}
                 />
-              </IconButton>
-              <Typography
+              </IconButton> */}
+              {/* <Typography
                 color={"primary.text.primary"}
                 variant="h5"
                 fontWeight={600}
@@ -84,31 +116,21 @@ export default function FeaturePage() {
                 gutterBottom
               >
                 {icon.title}
-              </Typography>
-              <Typography
+              </Typography> */}
+              {/* <Typography
                 textAlign="center"
                 fontSize="18px"
                 color={"primary.text.primary"}
               >
                 {icon.subtitle}
-              </Typography>
+              </Typography> */}
             </Grid>
           ))}
           <Box className="feature-text-box">
             <FeaturesCard />
-            {/* <Typography textAlign="center" variant="subtitle">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum consectetur fermentum risus id blandit. Donec imperdiet
-              nisi non tortor eleifend vehicula. Vestibulum id risus nec est
-              faucibus aliquet. Ut vulputate arcu eget felis pellentesque, eu
-              dictum orci consequat. Praesent elit tellus, sagittis ac interdum
-              eu, aliquam vel dolor. Interdum et malesuada fames ac ante ipsum
-              primis in faucibus. Nulla vitae quam lacus. Quisque vel gravida
-              elit. Duis commodo molestie gravida. Aliquam erat volutpat.
-            </Typography> */}
           </Box>
         </Grid>
       </Box>
-    </Box>
+    </div>
   );
 }
