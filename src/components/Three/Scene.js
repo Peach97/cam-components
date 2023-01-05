@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Canvas, Shawo } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import OrbitController from "./OrbitController";
 import { PerspectiveCamera } from "@react-three/drei";
 import Model from "./Laptop";

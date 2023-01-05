@@ -1,20 +1,44 @@
 .App {
-  position: absolute;
+  position: relative;
   display: flex;
   /* justify-content: center; */
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   height: 100%;
-  width: 100%;
+  width: auto;
 }
 
 .panels {
-  position: relative;
+  position: fixed;
+  float: left;
   height: 100%;
   min-height: 100%;
   width: auto;
-  z-index: 1000;
 }
+
+.panel2 {
+  position: sticky;
+  height: 110vh;
+  top: 0;
+  float: left;
+  width: auto;
+  margin-top: 100%;
+  z-index: 1;
+}
+
+.panel3 {
+  position: sticky;
+  display: flex;
+  top: 0;
+  float: left;
+  height: 100%;
+  width: 100%;
+  margin-top: 20%;
+  z-index: 2;
+
+
+}
+
 
 .landing-text-box {
   display: flex;
@@ -31,7 +55,7 @@
   left: 0;
   border-width: 0 0 10rem 7.5rem;
   border-style: solid;
-  border-color: #8A00FF #2a2a2a;
+  border-color: #edd7ff #2a2a2a;
 }
 
 .landing-text {
@@ -39,18 +63,7 @@
   width: 70%;
 }
 
-.landing-page-img {
-  min-height: 100%;
-  min-width: 1024px;
-  bottom: 125px;
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-  /* Set up positioning */
-  position: absolute;
-  left: 0;
-  z-index: -1;
-}
+
 
 .landing-img {
   position: absolute;
@@ -63,9 +76,9 @@
   background-color: #16161d;
   height: fit-content;
   width: 90%;
-  margin-top: 5rem;
+  margin-top: 4.5rem;
   border-radius: 36px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .background-styles {
@@ -76,22 +89,23 @@
 }
 
 .first-card {
-  border-top-left-radius: 16px !important;
-  border-bottom-left-radius: 16px !important;
+  border-top-left-radius: 64px !important;
+  border-bottom-left-radius: 64px !important;
 
-  /* border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 50%; */
+  border-right: 1px solid #ffffff1a;
+  /* border-right: 50%; */
 }
 
 
 .third-card {
-  border-top-right-radius: 16px !important;
-  border-bottom-right-radius: 16px !important;
-  /* border-left: 1px solid rgba(255, 255, 255, 0.1); */
+  border-top-right-radius: 64px !important;
+  border-bottom-right-radius: 64px !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 
 }
 
 .feature-icons {
+  z-index: 999;
   padding: 0.5rem;
 }
 
@@ -100,6 +114,7 @@
   padding-top: 7.5rem;
   top: 0;
   left: 0;
+  min-height: 100vh;
   height: 100%;
   width: 100%;
   /* prevents your fixed panel from being on top of your subsequent panels */
@@ -107,33 +122,29 @@
 
 
 #second {
-  margin-top: 100%;
-  position: relative;
-  float: left;
+  /* float: left; */
   /* position: relative;
   height: fit-content;
   width: 100%;
   justify-content: center;
   display: flex; */
-
 }
 
 
 .sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
   width: auto;
-
+  height: auto;
+  /* margin-top: 0 !important; */
 }
 
-
-
 .icon-btn-box {
-  padding: 2.5rem 0 20rem 0;
-  height: fit-content;
+  padding: 0 0 20rem 0;
+  height: 100%;
   width: 100%;
+  border-radius: 50%;
 
 }
 
@@ -154,13 +165,14 @@
   animation: topToBottom 10s linear infinite 0s;
   -ms-animation: topToBottom 10s linear infinite 0s;
   /* -webkit-animation: topToBottom 12.5s linear infinite 0s; */
-  color: #8A00FF;
+  color: #088F8F;
   opacity: 0;
   overflow: hidden;
   position: absolute;
 }
 
 .slidingVertical span:nth-child(2) {
+  color: #8A00FF;
   animation-delay: 2.5s;
   -ms-animation-delay: 2.5s;
   -webkit-animation-delay: 2.5s;
@@ -168,12 +180,14 @@
 
 .slidingVertical span:nth-child(3) {
   animation-delay: 5s;
+  color: #FFC0CB;
   -ms-animation-delay: 5s;
   -webkit-animation-delay: 5s;
 }
 
 .slidingVertical span:nth-child(4) {
   animation-delay: 7.5s;
+  color: #e69900;
   -ms-animation-delay: 7.5s;
   -webkit-animation-delay: 7.5s;
 }

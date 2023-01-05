@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import "../../App.css";
 import { Grid, IconButton, Typography } from "@mui/material";
 import FeaturesCard from "./Card";
+import myScroll from "../../components/utils/gsap";
 
 const icons = [
   {
@@ -32,45 +33,40 @@ const icons = [
 
 export default function FeaturePage() {
   React.useEffect(() => {
-    var panel = document.querySelector("#second");
-    if (panel) {
-      window.addEventListener("scroll", () => {
-        const offsetTop = panel.getBoundingClientRect().top;
-        if (offsetTop <= 0) {
-          panel.classList.add(".sticky");
-        }
-      });
-    }
-  });
+    myScroll(".icon-btn-box", ".icon-btn-box");
+  }, []);
+  // React.useEffect(() => {
+  //   ParallaxScroll(".panel2", ".panels");
+  // });
 
   return (
-    <div id="second" className="panels">
+    <div id="second" className="panel2">
       <Box
         className="icon-btn-box"
         color={"primary.text.primary"}
         sx={{
-          background: `linear-gradient(to bottom, #8A00FF 45%, #16161d 15%)`,
+          background: `linear-gradient(to bottom, #088F8F 0%, #16161d 50%)`,
         }}
       >
         <Grid justifyContent="center" bgcolor="transparent" container>
           <Typography
             component="div"
             fontWeight={800}
-            fontSize="2rem"
+            fontSize="2.25rem"
             textAlign="center"
             width="100%"
-            sx={{ margin: "10rem 10rem 0 10rem" }}
+            sx={{ padding: "7.5rem 10rem 0 10rem" }}
           >
             What I can do for you.
           </Typography>
           <Typography
             component="div"
-            fontWeight={600}
-            fontSize="1.15rem"
+            fontWeight={400}
+            fontSize="1.05rem"
             textAlign="center"
             variant="subtitle"
             width="100%"
-            sx={{ margin: "2.5rem 10rem 0 10rem" }}
+            sx={{ margin: "1.5rem 10rem 0 10rem" }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
             consectetur fermentum risus id blandit. Donec imperdiet nisi non
@@ -126,7 +122,10 @@ export default function FeaturePage() {
               </Typography> */}
             </Grid>
           ))}
-          <Box className="feature-text-box">
+          <Box
+            className="feature-text-box"
+            sx={{ bgcolor: "transparent", border: "none" }}
+          >
             <FeaturesCard />
           </Box>
         </Grid>
