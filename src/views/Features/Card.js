@@ -59,7 +59,10 @@ export default function FeaturesCard() {
               className={item.class}
               sx={{
                 bgcolor: "background.default",
-                height: "55rem",
+                height: "30rem",
+                whiteSpace: "nowrap",
+                overflow: "visible",
+                border: "1px solid #ffffff1a",
                 "&.MuiPaper-root": {
                   borderRadius: "0",
                 },
@@ -75,17 +78,19 @@ export default function FeaturesCard() {
                 <Icon
                   sx={{
                     padding: "0.5rem 0.25rem 0.1rem 0.25rem",
-                    margin: "5rem auto 2.5rem auto",
-                    backgroundColor: "primary.tertiary",
+                    margin: "-2.5rem auto 1rem auto",
+                    backgroundColor: "#edd7ff",
+                    whiteSpace: "nowrap",
                     height: "fit-content",
                     width: "fit-content",
+                    border: "4px solid #16161d",
                     borderRadius: "50%",
                   }}
                 >
                   <img
                     className="feature-icons"
-                    height="50px"
-                    width="55px"
+                    height="40px"
+                    width="50px"
                     src={require("../../images/" + item.link + ".png")}
                     alt={`Cannot find ${item.title} link`}
                   />
@@ -93,10 +98,10 @@ export default function FeaturesCard() {
 
                 <Typography
                   textAlign="center"
-                  variant="h4"
+                  variant="h6"
                   fontWeight={800}
                   color={"primary.text.primary"}
-                  sx={{ margin: "0 0 2.5rem 0" }}
+                  sx={{ margin: "0 0 1rem 0" }}
                 >
                   {item.title}
                 </Typography>
@@ -118,9 +123,9 @@ export default function FeaturesCard() {
                       color: "primary.text.primary",
                       justifyContent: "center",
                       textAlign: "center",
-                      lineHeight: 1.25,
+                      lineHeight: 0.75,
                       fontWeight: 400,
-                      fontSize: "1.1rem",
+                      fontSize: "1rem",
                     }}
                   >
                     {skill}

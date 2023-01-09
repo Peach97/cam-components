@@ -8,10 +8,8 @@ import background from "../images/Background6.png";
 export default function LandingPage() {
   return (
     <Box id="first" bgcolor="background.default" className="panels">
-      {/* <div className="fold" /> */}
-      {/* <img src={background} alt="/" className="landing-page-img" /> */}
       <Box
-        sx={{ mt: "2.5rem", color: "text.primary" }}
+        sx={{ pt: "2.5rem", color: "text.primary" }}
         component="div"
         className="landing-text-box"
       >
