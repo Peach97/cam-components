@@ -45,7 +45,8 @@ export default function FeaturePage() {
         className="icon-btn-box"
         color={"primary.text.primary"}
         sx={{
-          background: `linear-gradient(to bottom, #088F8F 0%, #16161d 50%)`,
+          background: "#088F8F",
+          // `linear-gradient(to bottom, #8A00FF 35%, #16161d 0%)`
         }}
       >
         <Grid justifyContent="center" bgcolor="transparent" container>

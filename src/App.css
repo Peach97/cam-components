@@ -48,6 +48,12 @@
 
 }
 
+.pricing-box {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
 .fold {
   content: "";
   position: absolute;
