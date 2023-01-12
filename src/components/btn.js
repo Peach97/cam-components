@@ -3,32 +3,49 @@ import "./btn.css";
 import styled from "@emotion/styled";
 
 const CustomButton = styled("button")`
-  background: none;
-  text-transform: uppercase;
+  text-transform: none;
   color: inherit;
-  border: none;
+  border-radius: 64px;
+  border: 2px solid #ffffff;
   font: inherit;
   cursor: pointer;
   outline: inherit;
-  display: block;
+  display: flex;
   font-weight: 400;
-  background: none;
+  background-color: transparent;
   color: #ffffff;
-  &:after {
-    display: block;
-    content: "";
-    border-bottom: 3px solid #8a00ff;
-    cursor: pointer;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-  }
-  &:hover:after {
-    transform: scaleX(1);
-  }
-  &:after {
-    transform-origin: 0% 50%;
+  transition: all 0.2s ease-in;
+  &:hover {
+    background-color: #8a00ff;
   }
 `;
+// const CustomButton = styled("button")`
+//   background: none;
+//   text-transform: uppercase;
+//   color: inherit;
+//   border: none;
+//   font: inherit;
+//   cursor: pointer;
+//   outline: inherit;
+//   display: block;
+//   font-weight: 400;
+//   background: none;
+//   color: #ffffff;
+//   &:after {
+//     display: block;
+//     content: "";
+//     border-bottom: 3px solid #8a00ff;
+//     cursor: pointer;
+//     transform: scaleX(0);
+//     transition: transform 250ms ease-in-out;
+//   }
+//   &:hover:after {
+//     transform: scaleX(1);
+//   }
+//   &:after {
+//     transform-origin: 0% 50%;
+//   }
+// `;
 
 export default function MyButton({ children, fontSize, padding, margin }) {
   return (

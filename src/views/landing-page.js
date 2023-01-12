@@ -4,10 +4,11 @@ import { Typography, Box } from "@mui/material";
 import MyButton from "../components/btn";
 import Scene from "../components/Three/Scene";
 import background from "../images/Background6.png";
+import axios from "axios";
 
 export default function LandingPage() {
   return (
-    <Box id="first" bgcolor="background.default" className="panels">
+    <Box id="first" bgcolor="primary.main" className="panels">
       <Box
         sx={{ pt: "2.5rem", color: "text.primary" }}
         component="div"
@@ -31,9 +32,9 @@ export default function LandingPage() {
           </div>
           Lets get to it.
           <Box sx={{ mt: "2.5rem" }}>
-            <MyButton fontSize="1.5rem" padding="0.25rem 2rem 0.25rem 0">
+            {/* <MyButton fontSize="1.5rem" padding="0.25rem 2rem 0.25rem 2rem">
               See Pricing
-            </MyButton>
+            </MyButton> */}
           </Box>
         </Typography>
         <Scene />

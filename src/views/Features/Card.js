@@ -14,7 +14,7 @@ const card = [
     title: "Front End",
     class: "first-card",
     excerpt: "Web languages:",
-    link: "monitor (2)",
+    link: "web-design",
     skills: [
       "JavaScript",
       "HTML",
@@ -29,7 +29,7 @@ const card = [
     title: "Back End",
     class: "second-card",
     excerpt: "Storage capabilities:",
-    link: "servers (1)",
+    link: "servers (2)",
     skills: [
       "MongoDB",
       "AJAX Libraries",
@@ -42,7 +42,7 @@ const card = [
     title: "Design",
     class: "third-card",
     excerpt: "Creative tools:",
-    link: "design",
+    link: "sketch",
     skills: ["Figma", "Canva", "Adobe Photoshop", "GIMP", "Blender3D Modeling"],
   },
 ];
@@ -58,7 +58,7 @@ export default function FeaturesCard() {
               key={index}
               className={item.class}
               sx={{
-                bgcolor: "background.default",
+                bgcolor: "primary.main",
                 height: "30rem",
                 whiteSpace: "nowrap",
                 overflow: "visible",
@@ -79,11 +79,11 @@ export default function FeaturesCard() {
                   sx={{
                     padding: "0.5rem 0.25rem 0.1rem 0.25rem",
                     margin: "-2.5rem auto 1rem auto",
-                    backgroundColor: "#edd7ff",
+                    backgroundColor: "#088F8F",
                     whiteSpace: "nowrap",
                     height: "fit-content",
                     width: "fit-content",
-                    border: "4px solid #16161d",
+                    border: "2px solid #ffffff",
                     borderRadius: "50%",
                   }}
                 >

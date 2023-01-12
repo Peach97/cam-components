@@ -15,11 +15,14 @@ const customLight = (mode) => ({
           primary: "#ffffff",
           secondary: "#3C434A",
           hint: "#219DFD",
+          social: "#8B98A5",
         },
       }),
     },
     background: {
       default: "#16161d",
+      transparent: "#050810",
+      highlight: "#171E2F",
     },
   },
 });

@@ -1,0 +1,40 @@
+.testimonials-box {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    height: 30vh;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+.testimonials {
+    height: 10rem;
+    width: 20rem;
+    margin: 0 1rem 0 1rem;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 32px;
+    transform: translateX(100%);
+    animation: move 20s linear infinite;
+}
+
+.testimonials-text {
+    width: 20rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* Addition lines for 2 line or multiline ellipsis */
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
+@keyframes move {
+    to {
+        transform: translateX(-200%);
+    }
+}
